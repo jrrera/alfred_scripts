@@ -1,0 +1,7 @@
+do shell script "path=$(echo ~/Music); count=$(find \"$path\" -name \"*.asd\" | wc -l | xargs); echo \"Hiding $count .asd files\"" with administrator privileges
+
+do shell script "path=$(echo ~/Music); find \"$path\" -name \"*.asd\" -exec chflags hidden {} \\;" with administrator privileges
+
+"Process complete"
+
+# sudo find ~/Music/References -name "*.asd" -exec chflags hidden {} \;
